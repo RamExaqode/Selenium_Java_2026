@@ -1,6 +1,6 @@
 import java.time.Duration;
 import java.util.List;
-
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,7 +28,8 @@ public class AutoSuggestiveDropdown {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 		    By.cssSelector("li[class='ui-menu-item'] a")
 		));
-
+		
+		
 		// Now fetch options
 		List<WebElement> options = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a"));
 
