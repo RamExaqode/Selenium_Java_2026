@@ -1,6 +1,8 @@
 import java.time.Duration;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +22,22 @@ public class e2e_FlightTicketBooking {
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 
+		Set<Cookie> allCookies = driver.manage().getCookies();
+
+	    // Print total count
+	    System.out.println("Total Cookies: " + allCookies.size());
+
+	    // Print each cookie
+	    for (Cookie cookie : allCookies) {
+	        System.out.println("-----------------------------");
+	        System.out.println("Name     : " + cookie.getName());
+	        System.out.println("Value    : " + cookie.getValue());
+	        System.out.println("Domain   : " + cookie.getDomain());
+	        System.out.println("Path     : " + cookie.getPath());
+	        System.out.println("Expiry   : " + cookie.getExpiry());
+	        System.out.println("isSecure : " + cookie.isSecure());
+	        System.out.println("isHttpOnly: " + cookie.isHttpOnly());
+	    }
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXT")).click();
 
 		driver.findElement(By.xpath("//a[contains(text(),'Pune (PNQ)')]")).click();
