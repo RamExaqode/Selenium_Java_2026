@@ -1,3 +1,4 @@
+package com.demoqa;
 import java.util.ArrayList;
 
 public class ArrayListPractice {

@@ -1,3 +1,4 @@
+package com.demoqa;
 
 public class MethodsDemo2 {
 

@@ -1,3 +1,4 @@
+package com.demoqa;
 import org.openqa.selenium.devtools.v143.systeminfo.SystemInfo;
 
 public class Stringsinjava {

@@ -1,3 +1,4 @@
+package com.demoqa;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
@@ -53,7 +54,10 @@ public class AddMultipleProductsToCart {
 				
 				// ✅ Wait until button clickable
 				WebElement addToCartBtn = product.findElement(By.xpath(".//button"));
-				//wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
+			//	WebElement addToCartBtn = product.findElement(By.xpath("//div[@class='product-action']/button")); //Not working
+				
+
+				wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
 
 				// ✅ Click
 				addToCartBtn.click();
@@ -70,6 +74,6 @@ public class AddMultipleProductsToCart {
 
 		System.out.println("Number of Items successfully added to cart : " +itemsAdded );
 		Thread.sleep(3000);
-		driver.quit();
+		//driver.quit();
 	}
 }
