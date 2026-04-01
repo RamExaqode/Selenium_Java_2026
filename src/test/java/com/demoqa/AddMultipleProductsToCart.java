@@ -1,79 +1,68 @@
 package com.demoqa;
+
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+public class AddMultipleProductsToCart extends BaseTest {
 
-public class AddMultipleProductsToCart {
+    public void addProductsTest() throws InterruptedException {
 
-	public static void main(String[] args) throws InterruptedException {
+        driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
+        // Items to add
+        List<String> itemsNeeded = Arrays.asList("Cucumber", "Walnuts", "Cashews");
 
-		// ✅ Explicit wait
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        // Get all products
+        List<WebElement> products = driver.findElements(By.cssSelector(".product"));
 
-		// ✅ Wait until products are visible
-		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".product")));
+        Actions actions = new Actions(driver);
 
-		// ✅ Products to add
-		List<String> itemsNeeded = Arrays.asList("Cucumber", "Walnuts", "Cashews");
+        int itemsAdded = 0;
 
-		
-		List<WebElement> products = driver.findElements(By.cssSelector(".product"));
+        for (WebElement product : products) {
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+            String productName = product.findElement(By.cssSelector("h4.product-name"))
+                    .getText().split("-")[0].trim();
 
-		int itemsAdded = 0;
+            if (itemsNeeded.contains(productName)) {
 
-		for (WebElement product : products) {
+                // Hover (optional)
+                actions.moveToElement(product).perform();
 
-			String productName = product.findElement(By.cssSelector("h4.product-name")).getText().split("-")[0].trim();
+                WebElement addToCartBtn = product.findElement(By.xpath(".//button"));
 
-			if (itemsNeeded.contains(productName)) {
+                wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
 
-				// ✅ Scroll to product
-				//js.executeScript("arguments[0].scrollIntoView({block: 'center'});", product);
+                addToCartBtn.click();
 
-				Actions actions = new Actions(driver);
-				actions.moveToElement(product).perform(); //javascript is the  most reliable method to use instead of Actions class
-				
-				// ✅ Wait until button clickable
-				WebElement addToCartBtn = product.findElement(By.xpath(".//button"));
-			//	WebElement addToCartBtn = product.findElement(By.xpath("//div[@class='product-action']/button")); //Not working
-				
+                itemsAdded++;
 
-				wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
+                if (itemsAdded == itemsNeeded.size()) {
+                    break;
+                }
+            }
+        }
 
-				// ✅ Click
-				addToCartBtn.click();
+        System.out.println("Number of Items successfully added to cart: " + itemsAdded);
 
-				itemsAdded++;
+        Thread.sleep(3000);
+    }
 
-				// ✅ Stop when all items added
-				if (itemsAdded == itemsNeeded.size()) {
-					break;
-					  // ✅ Add to list
-				}
-			}
-		}
+    public static void main(String[] args) throws InterruptedException {
 
-		System.out.println("Number of Items successfully added to cart : " +itemsAdded );
-		Thread.sleep(3000);
-		//driver.quit();
-	}
+        AddMultipleProductsToCart obj = new AddMultipleProductsToCart();
+
+        obj.setUp();            // ✅ initialize driver
+        obj.addProductsTest(); // ✅ run test
+        obj.tearDown();        // ✅ close browser
+    }
 }
