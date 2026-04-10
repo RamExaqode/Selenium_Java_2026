@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 
-    public WebDriver driver;
+    public static WebDriver driver;
 
     public void setUp() {
         WebDriverManager.chromedriver().setup();
@@ -29,7 +29,7 @@ public class BaseTest {
         driver.quit();
     }
 
-    public String takeScreenshot(String testName) throws IOException {
+    public static String takeScreenshot(String testName) throws IOException {
 
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
