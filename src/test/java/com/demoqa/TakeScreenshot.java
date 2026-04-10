@@ -3,7 +3,6 @@ package com.demoqa;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
 import java.util.Date;
 
 import org.apache.commons.io.FileUtils;
@@ -14,22 +13,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class BaseTest {
+public class TakeScreenshot {
 
-    public WebDriver driver;
+    public static void main(String[] args) throws IOException {
 
-    public void setUp() {
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    }
-
-    public void tearDown() {
-        driver.quit();
-    }
-
-    public String takeScreenshot(String testName) throws IOException {
+        driver.get("https://www.google.com");
 
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
@@ -40,12 +32,28 @@ public class BaseTest {
             folder.mkdir();
         }
 
-        String filePath = projectPath + "/screenshots/" + testName + "_" + timestamp + ".png";
-
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File dest = new File(filePath);
+        File dest = new File(projectPath + "/screenshots/screenshot_" + timestamp + ".png");
+
         FileUtils.copyFile(src, dest);
 
-        return filePath; 
+        System.out.println("Screenshot saved at: " + dest.getAbsolutePath());
+
+        driver.quit();
+        
+        //Directly calling from Base Class
+        /*public class GoogleTest extends BaseTest {
+
+    public void testGoogle() throws IOException {
+        setUp();
+
+        driver.get("https://www.google.com");
+
+        // Take screenshot
+        takeScreenshot("Google_Homepage");
+
+        tearDown();
+    }
+}*/
     }
 }
