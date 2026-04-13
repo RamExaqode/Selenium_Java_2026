@@ -3,14 +3,26 @@
 <suite name="Loan Department">
   <test name="Personal Loan">
     <classes>
-      <class name="testng.Day1"/>
+      <class name="testng.Day1">
+      <methods>
+  <include name="secondTestCase">
+  </include>
+  </methods>
+  </class> 
       <class name="testng.Day2" />
     </classes>
   </test> 
     
   <test name="Car Loan">
   <classes>
-  <class name="testng.Day3"></class> 
+  <class name="testng.Day3" >
+  
+  <methods>
+  <exclude name="MobileLoginCarLoan">
+  </exclude>
+  </methods>
+  </class> 
+  
   </classes>
   </test>
     
