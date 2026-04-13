@@ -8,7 +8,7 @@ public class Day4 {
 	@Test
 	public void webLoginHomeLoan() {
 
-		System.out.println("Web login Home");
+		System.out.println("Web Home page login");
 	}
 
 	
