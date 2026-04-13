@@ -22,7 +22,7 @@ public class WebTableSorting extends BaseTest {
 
 		driver.findElement(By.xpath("//tr/th[1]")).click();
 
-		// capture all webelements into list
+		// capture all web Elements into list
 
 		List<WebElement> elementsList = driver.findElements(By.xpath("//tr/td[1]"));
 
