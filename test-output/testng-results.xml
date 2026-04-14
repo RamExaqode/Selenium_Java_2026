@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="8" total="11" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-14T15:21:55 IST" name="Loan Department" finished-at="2026-04-14T15:21:55 IST" duration-ms="238">
+  <suite started-at="2026-04-14T20:09:32 IST" name="Default suite" finished-at="2026-04-14T20:09:32 IST" duration-ms="236">
     <groups>
       <group name="smoke">
-        <method signature="Day1.demo()[pri:0, instance:testng.Day1@33f676f6]" name="demo" class="testng.Day1"/>
-        <method signature="Day2.loginAPIPersonalLoan()[pri:0, instance:testng.Day2@747f281]" name="loginAPIPersonalLoan" class="testng.Day2"/>
-        <method signature="Day3.loginAPICarLoan()[pri:0, instance:testng.Day3@1169afe1]" name="loginAPICarLoan" class="testng.Day3"/>
+        <method signature="Day3.loginAPICarLoan()[pri:0, instance:testng.Day3@536dbea0]" name="loginAPICarLoan" class="testng.Day3"/>
       </group> <!-- smoke -->
     </groups>
-    <test started-at="2026-04-14T15:21:55 IST" name="Regression" finished-at="2026-04-14T15:21:55 IST" duration-ms="238">
+    <test started-at="2026-04-14T20:09:32 IST" name="Default test" finished-at="2026-04-14T20:09:32 IST" duration-ms="236">
       <class name="testng.Day3">
-        <test-method signature="loginAPICarLoan()[pri:0, instance:testng.Day3@1169afe1]" started-at="2026-04-14T15:21:55 IST" name="loginAPICarLoan" finished-at="2026-04-14T15:21:55 IST" duration-ms="4" status="PASS">
+        <test-method signature="MobileLoginCarLoan()[pri:0, instance:testng.Day3@536dbea0]" started-at="2026-04-14T20:09:32 IST" name="MobileLoginCarLoan" finished-at="2026-04-14T20:09:32 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MobileLoginCarLoan -->
+        <test-method signature="loginAPICarLoan()[pri:0, instance:testng.Day3@536dbea0]" started-at="2026-04-14T20:09:32 IST" name="loginAPICarLoan" finished-at="2026-04-14T20:09:32 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAPICarLoan -->
+        <test-method signature="webLoginCarLoan()[pri:0, instance:testng.Day3@536dbea0]" started-at="2026-04-14T20:09:32 IST" name="webLoginCarLoan" finished-at="2026-04-14T20:09:32 IST" depends-on-methods="testng.Day3.MobileLoginCarLoan" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- webLoginCarLoan -->
       </class> <!-- testng.Day3 -->
-      <class name="testng.Day1">
-        <test-method signature="demo()[pri:0, instance:testng.Day1@33f676f6]" started-at="2026-04-14T15:21:55 IST" name="demo" finished-at="2026-04-14T15:21:55 IST" duration-ms="65" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- demo -->
-      </class> <!-- testng.Day1 -->
-      <class name="testng.Day2">
-        <test-method signature="loginAPIPersonalLoan()[pri:0, instance:testng.Day2@747f281]" started-at="2026-04-14T15:21:55 IST" name="loginAPIPersonalLoan" finished-at="2026-04-14T15:21:55 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAPIPersonalLoan -->
-      </class> <!-- testng.Day2 -->
-    </test> <!-- Regression -->
-  </suite> <!-- Loan Department -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

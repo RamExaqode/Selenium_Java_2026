@@ -13,7 +13,7 @@ public class Day4 {
 
 	
 	
-	@Test
+	@Test (timeOut=4000)
 	public void MobileLoginHomeLoan() {
 
 		System.out.println("Mobile login Home");
