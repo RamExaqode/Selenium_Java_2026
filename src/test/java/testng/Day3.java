@@ -19,7 +19,7 @@ public class Day3 {
 		System.out.println("Mobile login Car");
 	}
 	
-	@Test
+	@Test(groups= {"smoke"})
 	public void loginAPICarLoan() {
 
 		System.out.println("loginAPICarLoan");
