@@ -15,7 +15,8 @@
       </class>
 
       <class name="testng.Day2"/>
-
+	  <class name="testng.TestNG_Annotations"/>
+	  <class name="testng.TestBG_DataProvider"/>
     </classes>
   </test>
 
@@ -26,7 +27,7 @@
       <class name="testng.Day3">
         <methods>
           <!-- Exclude specific method -->
-          <exclude name="MobileLoginCarLoan"/>
+          <include name="MobileLoginCarLoan"/>
         </methods>
       </class>
 

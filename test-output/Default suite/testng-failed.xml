@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testng.Day2">
+      <class name="testng.TestBG_DataProvider">
         <methods>
-          <include name="name"/>
+          <include name="mobileSignoutCarLoan"/>
         </methods>
-      </class> <!-- testng.Day2 -->
+      </class> <!-- testng.TestBG_DataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

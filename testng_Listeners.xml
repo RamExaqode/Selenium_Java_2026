@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Loan Department" parallel="tests" thread-count="2">
+
+    <!-- Listeners -->
+    <listeners>
+        <listener class-name="testng.Listeners"/>
+    </listeners>
+
+    <!-- Test 1 -->
+    <test name="Personal Loan" parallel="classes" thread-count="3">
+        <classes>
+
+            <class name="testng.Day1">
+                <methods>
+                    <include name="secondTestCase"/>
+                </methods>
+            </class>
+
+            <class name="testng.Day2"/>
+            <class name="testng.TestNG_Annotations"/>
+            <class name="testng.TestNG_DataProvider"/>
+
+        </classes>
+    </test>
+
+    <!-- Test 2 -->
+    <test name="Car Loan">
+        <classes>
+            <class name="testng.Day3">
+                <methods>
+                    <include name="MobileLoginCarLoan"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test 3 -->
+    <test name="Home Loan">
+        <classes>
+
+            <class name="testng.Day5">
+                <methods>
+                    <exclude name="Mobile.*"/>
+                </methods>
+            </class>
+
+            <class name="testng.Day2"/>
+
+        </classes>
+    </test>
+
+</suite>
