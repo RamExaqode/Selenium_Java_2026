@@ -12,14 +12,20 @@
   <!-- ✅ Dependencies -->
   <dependencies>
 
-    <!-- Selenium -->
+	<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>2.24.0</version>
+</dependency>
+
+		<!-- Selenium -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.41.0</version>
     </dependency>
 
-    <!-- TestNG -->
+		<!-- TestNG -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
@@ -27,21 +33,26 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- Allure TestNG -->
+<dependency>
+    <groupId>com.epam.healenium</groupId>
+    <artifactId>healenium-web</artifactId>
+    <version>3.4.0</version>
+</dependency>
+		<!-- Allure TestNG -->
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
       <version>2.24.0</version>
     </dependency>
 
-    <!-- SLF4J -->
+		<!-- SLF4J -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>2.0.13</version>
     </dependency>
 
-    <!-- WebDriverManager -->
+		<!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>

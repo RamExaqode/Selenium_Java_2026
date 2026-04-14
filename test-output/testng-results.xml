@@ -1,77 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-14T12:47:35 IST" name="Loan Department" finished-at="2026-04-14T12:47:35 IST" duration-ms="234">
+  <suite started-at="2026-04-14T13:52:33 IST" name="Default suite" finished-at="2026-04-14T13:52:34 IST" duration-ms="153">
     <groups>
     </groups>
-    <test started-at="2026-04-14T12:47:35 IST" name="Personal Loan" finished-at="2026-04-14T12:47:35 IST" duration-ms="234">
-      <class name="testng.Day3">
-        <test-method signature="MobileLoginCarLoan()[pri:0, instance:testng.Day3@69ee81fc]" started-at="2026-04-14T12:47:35 IST" name="MobileLoginCarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
+    <test started-at="2026-04-14T13:52:33 IST" name="Default test" finished-at="2026-04-14T13:52:34 IST" duration-ms="153">
+      <class name="testng.TestNG_Annotations">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:testng.TestNG_Annotations@13bc8645]" started-at="2026-04-14T13:52:33 IST" name="beforeTestMethod" finished-at="2026-04-14T13:52:33 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MobileLoginCarLoan -->
-        <test-method signature="loginAPICarLoan()[pri:0, instance:testng.Day3@69ee81fc]" started-at="2026-04-14T12:47:35 IST" name="loginAPICarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="3" status="PASS">
+        </test-method> <!-- beforeTestMethod -->
+        <test-method signature="testMethod()[pri:0, instance:testng.TestNG_Annotations@13bc8645]" started-at="2026-04-14T13:52:33 IST" name="testMethod" finished-at="2026-04-14T13:52:33 IST" duration-ms="43" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginAPICarLoan -->
-        <test-method signature="webLoginCarLoan()[pri:0, instance:testng.Day3@69ee81fc]" started-at="2026-04-14T12:47:35 IST" name="webLoginCarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- testMethod -->
+        <test-method is-config="true" signature="afterTestMethod()[pri:0, instance:testng.TestNG_Annotations@13bc8645]" started-at="2026-04-14T13:52:34 IST" name="afterTestMethod" finished-at="2026-04-14T13:52:34 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- webLoginCarLoan -->
-      </class> <!-- testng.Day3 -->
-      <class name="testng.Day4">
-        <test-method signature="MobileLoginHomeLoan()[pri:0, instance:testng.Day4@6e2aa843]" started-at="2026-04-14T12:47:35 IST" name="MobileLoginHomeLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileLoginHomeLoan -->
-        <test-method signature="loginAPIHomeLoan()[pri:0, instance:testng.Day4@6e2aa843]" started-at="2026-04-14T12:47:35 IST" name="loginAPIHomeLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAPIHomeLoan -->
-        <test-method signature="webLoginHomeLoan()[pri:0, instance:testng.Day4@6e2aa843]" started-at="2026-04-14T12:47:35 IST" name="webLoginHomeLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- webLoginHomeLoan -->
-      </class> <!-- testng.Day4 -->
-      <class name="testng.Day1">
-        <test-method signature="demo()[pri:0, instance:testng.Day1@7486b455]" started-at="2026-04-14T12:47:35 IST" name="demo" finished-at="2026-04-14T12:47:35 IST" duration-ms="55" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- demo -->
-        <test-method signature="secondTestCase()[pri:0, instance:testng.Day1@7486b455]" started-at="2026-04-14T12:47:35 IST" name="secondTestCase" finished-at="2026-04-14T12:47:35 IST" duration-ms="4" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- secondTestCase -->
-      </class> <!-- testng.Day1 -->
-      <class name="testng.Day2">
-        <test-method signature="MobileLoginPersonalLoan()[pri:0, instance:testng.Day2@2d29b4ee]" started-at="2026-04-14T12:47:35 IST" name="MobileLoginPersonalLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileLoginPersonalLoan -->
-        <test-method signature="loginAPIPersonalLoan()[pri:0, instance:testng.Day2@2d29b4ee]" started-at="2026-04-14T12:47:35 IST" name="loginAPIPersonalLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginAPIPersonalLoan -->
-        <test-method signature="webLoginPersonalLoan()[pri:0, instance:testng.Day2@2d29b4ee]" started-at="2026-04-14T12:47:35 IST" name="webLoginPersonalLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- webLoginPersonalLoan -->
-      </class> <!-- testng.Day2 -->
-      <class name="testng.Day5">
-        <test-method signature="MobileAndroidLoginCarLoan()[pri:0, instance:testng.Day5@6f36c2f0]" started-at="2026-04-14T12:47:35 IST" name="MobileAndroidLoginCarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileAndroidLoginCarLoan -->
-        <test-method signature="MobileiOSLoginCarLoan()[pri:0, instance:testng.Day5@6f36c2f0]" started-at="2026-04-14T12:47:35 IST" name="MobileiOSLoginCarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileiOSLoginCarLoan -->
-        <test-method signature="MobileloginAPICarLoan()[pri:0, instance:testng.Day5@6f36c2f0]" started-at="2026-04-14T12:47:35 IST" name="MobileloginAPICarLoan" finished-at="2026-04-14T12:47:35 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MobileloginAPICarLoan -->
-      </class> <!-- testng.Day5 -->
-    </test> <!-- Personal Loan -->
-  </suite> <!-- Loan Department -->
+        </test-method> <!-- afterTestMethod -->
+      </class> <!-- testng.TestNG_Annotations -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
