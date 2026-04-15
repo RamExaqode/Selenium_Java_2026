@@ -34,6 +34,7 @@ public class StandAloneTest2 {
 		landingPage.goTo();
 		landingPage.loginApplication("ramp@gmail.com", "Track@0021");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		List <WebElement> products= driver.findElements(By.cssSelector("div.col-lg-4.col-md-6"));
 		WebElement prod=products.stream().filter(product->product.findElement(By.cssSelector("b")).getText().equals("ZARA COAT 3")).findFirst().orElse(null);
 		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 		Thread.sleep(4000);
