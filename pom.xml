@@ -18,6 +18,12 @@
     <version>2.24.0</version>
 </dependency>
 
+<!-- Maven dependency -->
+<dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>5.7.1</version>
+</dependency>
 		<!-- Selenium -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>

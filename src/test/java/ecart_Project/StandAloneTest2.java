@@ -21,7 +21,7 @@ import com.opencsv.CSVWriter;
 import eCart.pageobjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandAloneTest {
+public class StandAloneTest2 {
 	static String productName= "ZARA COAT 3";
 	
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -30,12 +30,10 @@ public class StandAloneTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.get("https://rahulshettyacademy.com/client/#/auth/login");
-		driver.findElement(By.id("userEmail")).sendKeys("ramp@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("Track@0021");
-		driver.findElement(By.id("login")).click();
+		LandingPage landingPage= new LandingPage(driver);
+		landingPage.goTo();
+		landingPage.loginApplication("ramp@gmail.com", "Track@0021");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		List <WebElement> products= driver.findElements(By.cssSelector("div.col-lg-4.col-md-6"));
 		WebElement prod=products.stream().filter(product->product.findElement(By.cssSelector("b")).getText().equals("ZARA COAT 3")).findFirst().orElse(null);
 		prod.findElement(By.cssSelector(".card-body button:last-of-type")).click();
 		Thread.sleep(4000);
