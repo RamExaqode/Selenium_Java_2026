@@ -9,33 +9,30 @@ import abstractComponents.AbstractComponent;
 
 public class LandingPage extends AbstractComponent {
 
-	WebDriver driver;
+    WebDriver driver;
 
-	public LandingPage(WebDriver driver) {
+    public LandingPage(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
 
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+    @FindBy(id = "userEmail")
+    WebElement userEmail;
 
-	}
+    @FindBy(id = "userPassword")
+    WebElement password;
 
-	@FindBy(id = "userEmail")
-	WebElement userEmail;
+    @FindBy(id = "login")
+    WebElement submit;
 
-	@FindBy(id = "userPassword")
-	WebElement Password;
+    public void loginApplication(String email, String pass) {
+        userEmail.sendKeys(email);
+        password.sendKeys(pass);
+        submit.click();
+    }
 
-	@FindBy(id = "login")
-	WebElement submit;
-	
-	public void loginApplication(String email, String password) {
-		userEmail.sendKeys(email);
-		Password.sendKeys(password);
-		submit.click();
-		
-	}
-	
-	public void goTo() {
-		driver.get("https://rahulshettyacademy.com/client/#/auth/login");
-
-	}
+    public void goTo() {
+        driver.get("https://rahulshettyacademy.com/client/#/auth/login");
+    }
 }
